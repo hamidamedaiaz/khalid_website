@@ -1,26 +1,797 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khalid</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AMEDIAZ GROUP — Topographie, foncier, BIM et digital · Témara, Maroc</title>
+  <meta name="description" content="Cabinet marocain de topographie, de foncier, de BIM et de transformation digitale. De la prospection foncière à la réception des travaux. Témara, Maroc.">
+  <meta name="theme-color" content="#0A1B33">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_MA">
+  <meta property="og:site_name" content="AMEDIAZ GROUP">
+  <meta property="og:title" content="AMEDIAZ GROUP — Demain se mesure aujourd’hui.">
+  <meta property="og:description" content="Topographie · Foncier · BIM · Digital. Cabinet marocain basé à Témara.">
+  <!-- TODO : ajouter og:image (1200×630) une fois le visuel de partage créé -->
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    /* Les états « masqués avant animation » ne s'appliquent que si le JS tourne.
+       Filet de sécurité : si main.js n'a pas démarré après 3 s, tout redevient visible. */
+    document.documentElement.classList.add('js');
+    setTimeout(function () {
+      var h = document.documentElement;
+      if (!h.classList.contains('js-ready')) h.classList.remove('js');
+    }, 3000);
+  </script>
+  <script defer src="js/main.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "AMEDIAZ GROUP",
+    "description": "Cabinet marocain de topographie, de foncier, de BIM et de transformation digitale.",
+    "telephone": "+212610936544",
+    "email": "kh.amediaz@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Avenue Abdelkarim El Khatabi, Imm 30, Appt 4",
+      "addressLocality": "Témara",
+      "addressCountry": "MA"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 33.9287, "longitude": -6.9062 },
+    "founder": {
+      "@type": "Person",
+      "name": "Khalid AMEDIAZ",
+      "jobTitle": "Ingénieur Géomètre Topographe, BIM Manager"
+    }
+  }
+  </script>
 </head>
+
 <body>
-  <header>
-    <h1>Khalid</h1>
-    <p>Welcome to my website.</p>
+  <!-- Monogramme AG (reconstruction provisoire — à remplacer par le fichier officiel) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="ag-mark" viewBox="0 0 120 120">
+      <path d="M95.36 24.64A50 50 0 1 0 110 60H84" fill="none" stroke="currentColor" stroke-width="5"/>
+      <path d="M34 90 60 32 86 90M45 70H75" fill="none" stroke="currentColor" stroke-width="5"/>
+      <circle cx="60" cy="32" r="5" style="fill:var(--gold)"/>
+    </symbol>
+  </svg>
+
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top" aria-label="AMEDIAZ GROUP — Accueil">
+        <svg class="brand__mark" viewBox="0 0 120 120" aria-hidden="true"><use href="#ag-mark"/></svg>
+        <span class="brand__name">AMEDIAZ <span>GROUP</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#expertises">Expertises</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#references">Références</a></li>
+          <li><a href="#bim-digital">BIM &amp; Digital</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--outline btn--sm nav__cta" href="#contact">Parler de votre projet <span class="btn__arrow" aria-hidden="true">→</span></a>
+
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+        <span class="burger__bars" aria-hidden="true"></span>
+      </button>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>About</h2>
-      <p>This is a basic starting page.</p>
+  <div class="menu theme-dark" id="menu">
+    <nav aria-label="Menu mobile">
+      <ol>
+        <li><a href="#expertises">Expertises</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#references">Références</a></li>
+        <li><a href="#bim-digital">BIM &amp; Digital</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+    <div class="menu__foot">
+      <a class="btn btn--primary btn--block" href="#contact">Parler de votre projet <span class="btn__arrow" aria-hidden="true">→</span></a>
+      <p class="label">Témara · 33.9287° N — 6.9062° O</p>
+      <p><a href="tel:+212610936544">+212&nbsp;6&nbsp;10&nbsp;93&nbsp;65&nbsp;44</a></p>
+      <p><a href="mailto:kh.amediaz@gmail.com">kh.amediaz@gmail.com</a></p>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ 01 · HERO ============ -->
+    <section class="hero theme-dark bg-900" id="top" aria-labelledby="hero-title">
+      <svg class="hero__contours" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"
+           data-contours data-seed="7" data-cx="1150" data-cy="450" data-r0="40" data-r1="760" data-levels="14" data-major="5" data-sx="1.25" data-sy="0.9"></svg>
+
+      <!-- Monogramme AG géant en filigrane : contour fin, construction discrète, point or = station au sommet du A -->
+      <div class="hero__art" aria-hidden="true">
+        <svg viewBox="0 0 1000 1000" focusable="false">
+          <g class="hm-construct fade" style="--delay:1.4s">
+            <circle cx="500" cy="500" r="400" stroke-dasharray="2 8"/>
+            <path d="M100 276H900M100 740H900M500 60V940"/>
+            <path d="M490 500H510M500 490V510"/>
+          </g>
+          <path class="hm-a draw" d="M292 740 500 276 708 740M380 660H620" pathLength="1" style="--delay:.8s;--dur:1.1s"/>
+          <path class="hm-g draw" d="M782.9 217.1A400 400 0 1 0 900 500H692" pathLength="1" style="--delay:1.3s;--dur:1.3s"/>
+          <circle class="hm-ring" cx="500" cy="276" r="10"/>
+          <circle class="hm-dot" cx="500" cy="276" r="5"/>
+        </svg>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow rv" style="--delay:.05s"><span class="eyebrow__dot" aria-hidden="true"></span>33.9287° N — 6.9062° O · Témara</p>
+          <h1 id="hero-title">
+            <span class="line rv" style="--delay:.15s">La précision au service</span>
+            <span class="line rv" style="--delay:.25s">de vos projets.</span>
+          </h1>
+          <p class="lead rv" style="--delay:.4s">Topographie, expertise foncière et solutions BIM <br class="br-d">au service des projets de construction et <br class="br-d">d’aménagement au Maroc.</p>
+          <p class="disc rv" style="--delay:.5s" aria-label="Topographie, Foncier, BIM, Digital">
+            <span>Topographie</span><i aria-hidden="true"></i><span>Foncier</span><i aria-hidden="true"></i><span>BIM</span><i aria-hidden="true"></i><span>Digital</span>
+          </p>
+          <div class="hero__actions rv" style="--delay:.6s">
+            <a class="btn btn--primary" href="#expertises">Découvrir nos expertises <span class="btn__arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn--outline" href="#contact">Parler de votre projet</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__strip rv" style="--delay:.8s">
+        <div class="container hero__strip-inner">
+          <p class="slogan">« Demain se mesure aujourd’hui. »</p>
+          <div class="hero__sheet" aria-hidden="true">
+            <svg class="scalebar" viewBox="0 0 220 28">
+              <path d="M1 8H219M1 2V14M110 2V14M219 2V14" fill="none" stroke="currentColor"/>
+              <rect x="1" y="6" width="109" height="4" fill="currentColor"/>
+              <text x="0" y="26">0</text><text x="110" y="26" text-anchor="middle">50</text><text x="219" y="26" text-anchor="end">100 m</text>
+            </svg>
+            <span class="label">01 / 08</span>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- ============ 02 · À PROPOS ============ -->
+    <section class="section about" id="apropos" aria-labelledby="about-title" data-io>
+      <svg class="about__geo" viewBox="0 0 320 320" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M267.8 62.2A140 140 0 1 0 300 160H226"/>
+          <path d="M100 250 160 90 220 250M124 210H196"/>
+        </g>
+      </svg>
+
+      <div class="container">
+        <div class="about__hr" aria-hidden="true"></div>
+        <div class="grid about__grid">
+          <div class="about__rail"><span class="label label--dot">02 — À propos</span></div>
+
+          <div class="about__text">
+            <h2 class="about__title" id="about-title">
+              <span class="line">Une expertise de terrain.</span>
+              <span class="line">Une vision digitale.</span>
+            </h2>
+            <p class="about__lead">AMEDIAZ GROUP est un cabinet marocain spécialisé en topographie, foncier, BIM et digital.</p>
+            <p class="about__p">Nous accompagnons les acteurs de la construction et de l’aménagement depuis l’analyse foncière jusqu’au suivi des travaux et au dossier technique cadastral.</p>
+            <a class="link" href="a-propos.html">Découvrir AMEDIAZ GROUP <span aria-hidden="true">→</span></a>
+          </div>
+
+          <ul class="about__stats">
+            <li class="stat">
+              <p class="stat__num"><span data-count="9">9</span><span class="stat__suf">ans</span></p>
+              <p class="stat__lbl">d’expérience professionnelle</p>
+            </li>
+            <li class="stat">
+              <p class="stat__num"><span data-count="100">100</span><span class="stat__suf stat__suf--big">+</span></p>
+              <p class="stat__lbl">expertises immobilières réalisées</p>
+            </li>
+            <li class="stat">
+              <p class="stat__num"><span data-count="500">500</span><span class="stat__suf">h+</span></p>
+              <p class="stat__lbl">de formation BIM<span class="stat__sub">2021 — 2025</span></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 · EXPERTISES ============ -->
+    <section class="section xps theme-dark bg-900 crosses" id="expertises" aria-labelledby="xp-title">
+      <div class="container grid">
+        <div class="xps__left">
+          <div class="xps__sticky">
+            <span class="label">03 — Expertises</span>
+            <h2 id="xp-title">La mesure,<br>de la donnée<br>à la décision.</h2>
+            <p class="lead">Des expertises complémentaires pour accompagner chaque phase d’un projet, du terrain jusqu’au modèle numérique.</p>
+            <ol class="xps__index" aria-label="Aller à une expertise">
+              <li><button type="button" data-xp="0" class="is-active">01</button></li>
+              <li><button type="button" data-xp="1">02</button></li>
+              <li><button type="button" data-xp="2">03</button></li>
+              <li><button type="button" data-xp="3">04</button></li>
+              <li><button type="button" data-xp="4">05</button></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="xps__list">
+          <!-- 01 -->
+          <div class="xp is-open" data-reveal>
+            <h3 class="xp__head"><button class="xp__btn" type="button" id="xp-b1" aria-expanded="true" aria-controls="xp-p1">
+              <span class="xp__num">01</span><span class="xp__title">Topographie</span><span class="xp__sign" aria-hidden="true"></span>
+            </button></h3>
+            <div class="xp__panel" id="xp-p1" role="region" aria-labelledby="xp-b1"><div class="xp__inner"><div class="xp__body">
+              <ol class="xp__items">
+                <li style="--k:0"><span>01.1</span>Levés topographiques</li>
+                <li style="--k:1"><span>01.2</span>Plans cotés</li>
+                <li style="--k:2"><span>01.3</span>Implantation</li>
+                <li style="--k:3"><span>01.4</span>Contrôle de conformité</li>
+                <li style="--k:4"><span>01.5</span>Suivi topographique des travaux</li>
+                <li style="--k:5"><span>01.6</span>Récolement</li>
+              </ol>
+              <figure class="xp__fig">
+                <svg viewBox="0 0 200 150" aria-hidden="true" focusable="false">
+                  <path class="d" pathLength="1" d="M40 78C42 44 78 24 112 30C150 36 168 66 160 96C152 124 116 132 84 126C52 120 38 104 40 78Z"/>
+                  <path class="d" pathLength="1" d="M56 78C58 54 82 40 108 44C136 48 148 68 142 90C136 110 112 116 88 112C66 108 54 96 56 78Z"/>
+                  <path class="d" pathLength="1" d="M74 78C76 62 92 54 108 58C124 62 130 76 126 88C122 100 106 102 92 100C80 98 72 90 74 78Z"/>
+                  <path d="M100 70 106 82H94Z"/>
+                  <path class="d" pathLength="1" d="M40 142H160M40 137V147M160 137V147"/>
+                </svg>
+                <figcaption>Fig. 01 — Levé topographique</figcaption>
+              </figure>
+            </div></div></div>
+          </div>
+
+          <!-- 02 -->
+          <div class="xp" data-reveal style="--d:.08s">
+            <h3 class="xp__head"><button class="xp__btn" type="button" id="xp-b2" aria-expanded="false" aria-controls="xp-p2">
+              <span class="xp__num">02</span><span class="xp__title">Foncier &amp; Expertise</span><span class="xp__sign" aria-hidden="true"></span>
+            </button></h3>
+            <div class="xp__panel" id="xp-p2" role="region" aria-labelledby="xp-b2"><div class="xp__inner"><div class="xp__body">
+              <ol class="xp__items">
+                <li style="--k:0"><span>02.1</span>Prospection foncière</li>
+                <li style="--k:1"><span>02.2</span>Expertise foncière</li>
+                <li style="--k:2"><span>02.3</span>Expertise immobilière</li>
+                <li style="--k:3"><span>02.4</span>Analyse documentaire</li>
+                <li style="--k:4"><span>02.5</span>Dossiers techniques cadastraux</li>
+                <li style="--k:5"><span>02.6</span>Foncier judiciaire</li>
+              </ol>
+              <figure class="xp__fig">
+                <svg viewBox="0 0 200 150" aria-hidden="true" focusable="false">
+                  <path class="d" pathLength="1" d="M36 40 150 28 172 96 108 124 44 104Z"/>
+                  <path class="d" pathLength="1" d="M36 40 172 96M108 124 116 62"/>
+                  <path d="M28 24 142 12M28 18V30M142 6V18" stroke-dasharray="3 3"/>
+                  <rect x="33.5" y="37.5" width="5" height="5"/><rect x="147.5" y="25.5" width="5" height="5"/>
+                  <rect x="169.5" y="93.5" width="5" height="5"/><rect x="105.5" y="121.5" width="5" height="5"/>
+                  <rect x="41.5" y="101.5" width="5" height="5"/>
+                </svg>
+                <figcaption>Fig. 02 — Parcellaire</figcaption>
+              </figure>
+            </div></div></div>
+          </div>
+
+          <!-- 03 -->
+          <div class="xp" data-reveal style="--d:.16s">
+            <h3 class="xp__head"><button class="xp__btn" type="button" id="xp-b3" aria-expanded="false" aria-controls="xp-p3">
+              <span class="xp__num">03</span><span class="xp__title">SIG &amp; Analyse spatiale</span><span class="xp__sign" aria-hidden="true"></span>
+            </button></h3>
+            <div class="xp__panel" id="xp-p3" role="region" aria-labelledby="xp-b3"><div class="xp__inner"><div class="xp__body">
+              <ol class="xp__items">
+                <li style="--k:0"><span>03.1</span>Analyse spatiale</li>
+                <li style="--k:1"><span>03.2</span>Cartographie</li>
+                <li style="--k:2"><span>03.3</span>Structuration des données géographiques</li>
+                <li style="--k:3"><span>03.4</span>Aide à la décision territoriale</li>
+              </ol>
+              <figure class="xp__fig">
+                <svg viewBox="0 0 200 150" aria-hidden="true" focusable="false">
+                  <path class="d" pathLength="1" d="M100 18 150 40 100 62 50 40Z"/>
+                  <path class="d" pathLength="1" d="M100 53 150 75 100 97 50 75Z"/>
+                  <path class="d" pathLength="1" d="M100 88 150 110 100 132 50 110Z"/>
+                  <path d="M50 40V75M150 40V75M50 75V110M150 75V110" stroke-dasharray="2 3"/>
+                  <path d="M75 29 125 51M125 29 75 51"/>
+                  <circle cx="100" cy="40" r="2.5"/>
+                </svg>
+                <figcaption>Fig. 03 — Couches SIG</figcaption>
+              </figure>
+            </div></div></div>
+          </div>
+
+          <!-- 04 -->
+          <div class="xp" data-reveal style="--d:.24s">
+            <h3 class="xp__head"><button class="xp__btn" type="button" id="xp-b4" aria-expanded="false" aria-controls="xp-p4">
+              <span class="xp__num">04</span><span class="xp__title">BIM &amp; Digital</span><span class="xp__sign" aria-hidden="true"></span>
+            </button></h3>
+            <div class="xp__panel" id="xp-p4" role="region" aria-labelledby="xp-b4"><div class="xp__inner"><div class="xp__body">
+              <ol class="xp__items">
+                <li style="--k:0"><span>04.1</span>BIM Management</li>
+                <li style="--k:1"><span>04.2</span>Modélisation</li>
+                <li style="--k:2"><span>04.3</span>Coordination BIM</li>
+                <li style="--k:3"><span>04.4</span>Structuration de données</li>
+                <li style="--k:4"><span>04.5</span>Workflows numériques</li>
+                <li style="--k:5"><span>04.6</span>Digitalisation des processus</li>
+              </ol>
+              <figure class="xp__fig">
+                <svg viewBox="0 0 200 150" aria-hidden="true" focusable="false">
+                  <g transform="translate(10 5) scale(.56)" stroke-width="1.7">
+                    <path class="d" pathLength="1" d="M150 0 271.2 70V180L193.3 225 72.1 155V45Z"/>
+                    <path class="d" pathLength="1" d="M72.1 45 193.3 115 271.2 70M193.3 115V225"/>
+                    <path d="M150 0V110M150 110 271.2 180M150 110 72.1 155" stroke-dasharray="4 5" opacity=".6"/>
+                    <path d="M72.1 127.5 193.3 197.5M72.1 100 193.3 170M72.1 72.5 193.3 142.5M271.2 152.5 193.3 197.5M271.2 125 193.3 170M271.2 97.5 193.3 142.5" opacity=".7"/>
+                  </g>
+                </svg>
+                <figcaption>Fig. 04 — Modèle filaire</figcaption>
+              </figure>
+            </div></div></div>
+          </div>
+
+          <!-- 05 -->
+          <div class="xp" data-reveal style="--d:.32s">
+            <h3 class="xp__head"><button class="xp__btn" type="button" id="xp-b5" aria-expanded="false" aria-controls="xp-p5">
+              <span class="xp__num">05</span><span class="xp__title">Management de projet</span><span class="xp__sign" aria-hidden="true"></span>
+            </button></h3>
+            <div class="xp__panel" id="xp-p5" role="region" aria-labelledby="xp-b5"><div class="xp__inner"><div class="xp__body">
+              <ol class="xp__items">
+                <li style="--k:0"><span>05.1</span>Assistance à maîtrise d’ouvrage</li>
+                <li style="--k:1"><span>05.2</span>Suivi de projet</li>
+                <li style="--k:2"><span>05.3</span>Coordination technique</li>
+                <li style="--k:3"><span>05.4</span>Accompagnement jusqu’à la réception</li>
+              </ol>
+              <figure class="xp__fig">
+                <svg viewBox="0 0 200 150" aria-hidden="true" focusable="false">
+                  <path class="d" pathLength="1" d="M20 110 58 84 92 96 128 58 168 40"/>
+                  <circle cx="20" cy="110" r="3"/><circle cx="58" cy="84" r="3"/><circle cx="92" cy="96" r="3"/><circle cx="128" cy="58" r="3"/><circle cx="168" cy="40" r="5"/>
+                  <path d="M20 132H180M20 127V137M58 127V137M92 127V137M128 127V137M168 127V137"/>
+                  <path d="M20 113V127M58 87V127M92 99V127M128 61V127M168 45V127" stroke-dasharray="2 3" opacity=".6"/>
+                </svg>
+                <figcaption>Fig. 05 — Jalons</figcaption>
+              </figure>
+            </div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 · CYCLE DE VIE ============ -->
+    <section class="section cy" id="cycle" aria-labelledby="cy-title">
+      <div class="container">
+        <header class="cy__head">
+          <div>
+            <span class="label">04 — Cycle de vie</span>
+            <h2 id="cy-title" data-reveal>Du terrain<br>à la livraison.</h2>
+          </div>
+          <p class="lead" data-reveal>Un accompagnement structuré à chaque étape du projet, de la prospection foncière jusqu’à la réception et au dossier cadastral.</p>
+        </header>
+
+        <div class="cy__diagram">
+          <div class="cy__box" id="cyBox">
+            <div class="cy__cols" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span></div>
+            <div class="cy__rows" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+            <svg class="cy__north" viewBox="0 0 24 34" aria-hidden="true" focusable="false"><path d="M12 3 4 28 12 22 20 28Z" fill="none" stroke="currentColor"/><text x="12" y="34" text-anchor="middle">N</text></svg>
+
+            <svg class="cy__line" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <polyline points="50,78 150,64 250,70 350,56 450,62 550,48 650,54 750,40 850,46 950,30"/>
+            </svg>
+            <div class="cy__rail" aria-hidden="true"><i class="cy__fill"></i></div>
+
+            <ol class="cy__list">
+              <li class="cy__st cy__st--down cy__st--gold" style="--x:5;--y:78">
+                <button class="cy__node" type="button" aria-labelledby="cy-n1 cy-t1" aria-describedby="cy-d1"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="4.5"/></svg></button>
+                <div class="cy__label"><span class="cy__num" id="cy-n1">01</span><h3 class="cy__title" id="cy-t1">Prospection foncière</h3></div>
+                <p class="cy__desc" id="cy-d1">Identifier et qualifier les terrains adaptés à votre programme.</p>
+              </li>
+              <li class="cy__st cy__st--up" style="--x:15;--y:64">
+                <button class="cy__node" type="button" aria-labelledby="cy-n2 cy-t2" aria-describedby="cy-d2"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 14.5 13.5H1.5Z"/></svg></button>
+                <div class="cy__label"><span class="cy__num" id="cy-n2">02</span><h3 class="cy__title" id="cy-t2">Analyse spatiale (SIG)</h3></div>
+                <p class="cy__desc" id="cy-d2">Croiser cadastre, réglementation et contraintes pour objectiver le potentiel d’un site.</p>
+              </li>
+              <li class="cy__st cy__st--down" style="--x:25;--y:70">
+                <button class="cy__node" type="button" aria-labelledby="cy-n3 cy-t3" aria-describedby="cy-d3"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 14.5 13.5H1.5Z"/></svg></button>
+                <div class="cy__label"><span class="cy__num" id="cy-n3">03</span><h3 class="cy__title" id="cy-t3">Expertise foncière</h3></div>
+                <p class="cy__desc" id="cy-d3">Évaluer la situation foncière et technique du bien avant de s’engager.</p>
+              </li>
+              <li class="cy__st cy__st--up" style="--x:35;--y:56">
+                <button class="cy__node" type="button" aria-labelledby="cy-n4 cy-t4" aria-describedby="cy-d4"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 14.5 13.5H1.5Z"/></svg></button>
+                <div class="cy__label"><span class="cy__num" id="cy-n4">04</span><h3 class="cy__title" id="cy-t4">Plan de situation</h3></div>
+                <p class="cy__desc" id="cy-d4">Localiser précisément la parcelle pour constituer les dossiers administratifs.</p>
+              </li>
+              <li class="cy__st cy__st--down" style="--x:45;--y:62">
+                <button class="cy__node" type="button" aria-labelledby="cy-n5 cy-t5" aria-describedby="cy-d5"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 14.5 13.5H1.5Z"/></svg></button>
+                <div class="cy__label"><span class="cy__num" id="cy-n5">05</span><h3 class="cy__title" id="cy-t5">Levé topographique — plan coté</h3></div>
+                <p class="cy__desc" id="cy-d5">Relever le terrain et l’existant&nbsp;: plans, altimétrie, surfaces.</p>
+              </li>
+              <li class="cy__st cy__st--up" style="--x:55;--y:48">
+                <button class="cy__node" type="button" aria-labelledby="cy-n6 cy-t6" aria-describedby="cy-d6"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 14.5 13.5H1.5Z"/></svg></button>
+                <div class="cy__label"><span class="cy__num" id="cy-n6">06</span><h3 class="cy__title" id="cy-t6">Suivi jusqu’à l’autorisation</h3></div>
+                <p class="cy__desc" id="cy-d6">Constituer et suivre les pièces techniques auprès des administrations.</p>
+              </li>
+              <li class="cy__st cy__st--down" style="--x:65;--y:54">
+                <button class="cy__node" type="button" aria-labelledby="cy-n7 cy-t7" aria-describedby="cy-d7"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 14.5 13.5H1.5Z"/></svg></button>
+                <div class="cy__label"><span class="cy__num" id="cy-n7">07</span><h3 class="cy__title" id="cy-t7">Implantation topographique</h3></div>
+                <p class="cy__desc" id="cy-d7">Reporter fidèlement le projet sur le terrain.</p>
+              </li>
+              <li class="cy__st cy__st--up" style="--x:75;--y:40">
+                <button class="cy__node" type="button" aria-labelledby="cy-n8 cy-t8" aria-describedby="cy-d8"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 14.5 13.5H1.5Z"/></svg></button>
+                <div class="cy__label"><span class="cy__num" id="cy-n8">08</span><h3 class="cy__title" id="cy-t8">Contrôle de conformité</h3></div>
+                <p class="cy__desc" id="cy-d8">Vérifier les ouvrages exécutés par rapport aux plans et aux tolérances.</p>
+              </li>
+              <li class="cy__st cy__st--down" style="--x:85;--y:46">
+                <button class="cy__node" type="button" aria-labelledby="cy-n9 cy-t9" aria-describedby="cy-d9"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 14.5 13.5H1.5Z"/></svg></button>
+                <div class="cy__label"><span class="cy__num" id="cy-n9">09</span><h3 class="cy__title" id="cy-t9">Réception des travaux</h3></div>
+                <p class="cy__desc" id="cy-d9">Relevés et contrôles de fin de chantier pour appuyer la réception.</p>
+              </li>
+              <li class="cy__st cy__st--up" style="--x:95;--y:30">
+                <button class="cy__node" type="button" aria-labelledby="cy-n10 cy-t10" aria-describedby="cy-d10"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 14.5 13.5H1.5Z"/></svg></button>
+                <div class="cy__label"><span class="cy__num" id="cy-n10">10</span><h3 class="cy__title" id="cy-t10">Dossier technique cadastral</h3></div>
+                <p class="cy__desc" id="cy-d10">Établir les documents techniques nécessaires à la mise à jour cadastrale.</p>
+              </li>
+            </ol>
+          </div>
+
+          <p class="cy__caption" id="cyCaption" aria-live="polite"><span class="cy__hint">Survolez une étape pour en voir le détail.</span></p>
+
+          <div class="cy__phases" aria-hidden="true">
+            <div style="--s:0;--e:30"><span>Amont · 01–03</span></div>
+            <div style="--s:30;--e:60"><span>Études · 04–06</span></div>
+            <div style="--s:60;--e:90"><span>Chantier · 07–09</span></div>
+            <div style="--s:90;--e:100"><span>Cadastre · 10</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 · SECTEURS ============ -->
+    <section class="section sx" id="secteurs" aria-labelledby="sx-title" data-io>
+      <div class="container grid">
+        <div class="sx__side">
+          <div class="sx__sticky">
+            <span class="label label--dot">05 — Secteurs d’intervention</span>
+            <h2 id="sx-title">Une expertise adaptée<br>à chaque terrain.</h2>
+            <p class="lead">Des solutions topographiques, foncières et BIM adaptées aux contraintes de chaque secteur et à chaque échelle de projet.</p>
+
+            <figure class="sx__plate" aria-hidden="true">
+              <i class="cm cm--tl"></i><i class="cm cm--tr"></i><i class="cm cm--bl"></i><i class="cm cm--br"></i>
+              <svg class="tex is-on" data-tex="parcel" viewBox="0 0 360 280" focusable="false">
+                <path d="M30 40 320 30 334 246 46 254Z"/>
+                <path d="M150 35 128 150 46 254M128 150 334 146M230 32 240 148M240 148 300 244M128 150 200 250"/>
+                <rect x="27.5" y="37.5" width="5" height="5"/><rect x="317.5" y="27.5" width="5" height="5"/><rect x="331.5" y="243.5" width="5" height="5"/><rect x="43.5" y="251.5" width="5" height="5"/>
+                <rect x="147.5" y="32.5" width="5" height="5"/><rect x="125.5" y="147.5" width="5" height="5"/><rect x="237.5" y="145.5" width="5" height="5"/><rect x="197.5" y="247.5" width="5" height="5"/>
+              </svg>
+              <svg class="tex" data-tex="contours" viewBox="0 0 360 280" focusable="false">
+                <path d="M60 140C60 80 120 34 190 40C262 46 314 92 306 152C298 210 236 246 172 240C104 234 60 200 60 140Z"/>
+                <path d="M84 140C84 94 130 58 186 62C244 66 284 102 278 150C272 196 226 222 176 218C120 214 84 184 84 140Z"/>
+                <path d="M110 140C110 106 144 82 184 86C224 90 252 114 248 150C244 182 212 198 178 196C138 194 110 172 110 140Z"/>
+                <path d="M138 140C138 122 158 108 182 110C206 112 222 128 220 148C218 166 200 176 180 175C156 174 138 160 138 140Z"/>
+                <path d="M162 140C162 132 172 126 184 128C196 130 200 140 196 148C192 156 180 158 172 155C164 152 162 146 162 140Z"/>
+                <path d="M14 96C46 70 92 58 132 46"/>
+              </svg>
+              <svg class="tex" data-tex="network" viewBox="0 0 360 280" focusable="false">
+                <path d="M50 200 120 120 200 170 310 140M120 120 180 60 260 70 310 140M90 60 120 120M200 170 180 240"/>
+                <circle cx="50" cy="200" r="4"/><circle cx="180" cy="60" r="4"/><circle cx="260" cy="70" r="4"/><circle cx="310" cy="140" r="4"/><circle cx="90" cy="60" r="4"/><circle cx="180" cy="240" r="4"/>
+                <circle cx="120" cy="120" r="7"/><circle cx="200" cy="170" r="7"/>
+              </svg>
+              <svg class="tex" data-tex="grid" viewBox="0 0 360 280" focusable="false">
+                <path d="M0 40H360M0 80H360M0 120H360M0 160H360M0 200H360M0 240H360M40 0V280M80 0V280M120 0V280M160 0V280M200 0V280M240 0V280M280 0V280M320 0V280" opacity=".35"/>
+                <rect x="60" y="60" width="240" height="160"/>
+                <rect x="100" y="100" width="160" height="80" stroke-dasharray="4 4"/>
+                <path d="M60 236H300M60 231V241M300 231V241"/>
+              </svg>
+              <span class="sx__pt"></span>
+              <figcaption id="sxCap">Parcellaire</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <ol class="sx__list">
+          <li class="sx__row" tabindex="0" data-tex="parcel" data-name="Immobilier" style="--i:0"><span class="sx__num">01</span><span class="sx__name">Immobilier</span><span class="sx__kw">Foncier · Implantation · Expertise</span></li>
+          <li class="sx__row" tabindex="0" data-tex="contours" data-name="Mines &amp; Carrières" style="--i:1"><span class="sx__num">02</span><span class="sx__name">Mines &amp; Carrières</span><span class="sx__kw">Levé · Cubature · Cartographie</span></li>
+          <li class="sx__row" tabindex="0" data-tex="contours" data-name="Agriculture" style="--i:2"><span class="sx__num">03</span><span class="sx__name">Agriculture</span><span class="sx__kw">Parcellaire · Surfaces · SIG</span></li>
+          <li class="sx__row" tabindex="0" data-tex="network" data-name="Infrastructure" style="--i:3"><span class="sx__num">04</span><span class="sx__name">Infrastructure</span><span class="sx__kw">Topographie · Contrôle · Récolement</span></li>
+          <li class="sx__row" tabindex="0" data-tex="grid" data-name="Industrie" style="--i:4"><span class="sx__num">05</span><span class="sx__name">Industrie</span><span class="sx__kw">Implantation · Récolement · BIM</span></li>
+          <li class="sx__row" tabindex="0" data-tex="contours" data-name="Tourisme" style="--i:5"><span class="sx__num">06</span><span class="sx__name">Tourisme</span><span class="sx__kw">Levé · Aménagement · Foncier</span></li>
+          <li class="sx__row" tabindex="0" data-tex="grid" data-name="Sport" style="--i:6"><span class="sx__num">07</span><span class="sx__name">Sport</span><span class="sx__kw">Implantation · Contrôle · Réception</span></li>
+          <li class="sx__row" tabindex="0" data-tex="parcel" data-name="Urbanisme &amp; Aménagement" style="--i:7"><span class="sx__num">08</span><span class="sx__name">Urbanisme &amp; Aménagement</span><span class="sx__kw">Plans · SIG · Foncier</span></li>
+          <li class="sx__row" tabindex="0" data-tex="contours" data-name="Environnement" style="--i:8"><span class="sx__num">09</span><span class="sx__name">Environnement</span><span class="sx__kw">Cartographie · Levé · SIG</span></li>
+          <li class="sx__row" tabindex="0" data-tex="parcel" data-name="Cadastre &amp; Foncier judiciaire" style="--i:9"><span class="sx__num">10</span><span class="sx__name">Cadastre &amp; Foncier judiciaire</span><span class="sx__kw">Cadastre · Expertise · Plans</span></li>
+          <li class="sx__row" tabindex="0" data-tex="network" data-name="Énergie &amp; Réseaux" style="--i:10"><span class="sx__num">11</span><span class="sx__name">Énergie &amp; Réseaux</span><span class="sx__kw">Levé · SIG · Récolement</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 06 · RÉFÉRENCES ============ -->
+    <!-- Références professionnelles du FONDATEUR : ne jamais écrire qu'elles ont été réalisées par AMEDIAZ GROUP.
+         Champs inconnus = masqués (pas de « À préciser »). TODO Khalid : confirmer localisation / type / année.
+         Visuels : dessins illustratifs en attendant de vraies images (remplacer le <svg> par un <img> 3:2 + alt). -->
+    <section class="section rf theme-dark bg-900 crosses" id="references" aria-labelledby="rf-title" data-io>
+      <div class="container">
+        <header class="rf__head">
+          <span class="label">06 — Références</span>
+          <h2 id="rf-title">L’expérience des projets<br>qui comptent.</h2>
+          <p class="lead">Une expérience de terrain acquise sur des opérations emblématiques d’infrastructure, d’équipement et d’immobilier au Maroc.</p>
+        </header>
+
+        <p class="rf__sub label">Références professionnelles du fondateur</p>
+
+        <ol class="rf__list">
+          <li class="rf__row" tabindex="0" style="--i:0">
+            <span class="rf__num">01</span>
+            <div class="rf__main">
+              <h3 class="rf__name">Tour Mohammed VI</h3>
+              <p class="rf__role"><span class="rf__k">Rôle</span>Chef de projet</p>
+            </div>
+            <figure class="rf__vis">
+              <div class="rf__frame">
+                <svg viewBox="0 0 300 200" aria-hidden="true" focusable="false">
+                  <path class="d" pathLength="1" d="M20 176H280"/>
+                  <path class="d" pathLength="1" d="M112 176 128 22H172L188 176"/>
+                  <path class="d" pathLength="1" d="M150 22V8"/>
+                  <path class="d" pathLength="1" d="M113.5 162H186.5M114.9 148H185.1M116.4 134H183.6M117.8 120H182.2M119.3 106H180.7M120.7 92H179.3M122.2 78H177.8M123.6 64H176.4M125.1 50H174.9M126.5 36H173.5"/>
+                  <path d="M150 190V30" stroke-dasharray="3 4" opacity=".5"/>
+                  <path d="M216 176V22M210 176H222M210 22H222"/>
+                </svg>
+                <i class="cm cm--tl"></i><i class="cm cm--tr"></i><i class="cm cm--bl"></i><i class="cm cm--br"></i>
+              </div>
+              <figcaption>Fig. 01 — Visuel illustratif</figcaption>
+            </figure>
+          </li>
+
+          <li class="rf__row" tabindex="0" style="--i:1">
+            <span class="rf__num">02</span>
+            <div class="rf__main">
+              <h3 class="rf__name">Complexe Sportif Prince Moulay Abdellah</h3>
+              <p class="rf__role"><span class="rf__k">Rôle</span>Chef de projet</p>
+            </div>
+            <figure class="rf__vis">
+              <div class="rf__frame">
+                <svg viewBox="0 0 300 200" aria-hidden="true" focusable="false">
+                  <ellipse class="d" pathLength="1" cx="150" cy="100" rx="118" ry="70"/>
+                  <ellipse class="d" pathLength="1" cx="150" cy="100" rx="92" ry="50"/>
+                  <path class="d" pathLength="1" d="M112 82H188V118H112ZM150 82V118"/>
+                  <circle class="d" pathLength="1" cx="150" cy="100" r="9"/>
+                  <path d="M14 100H286M150 20V180" stroke-dasharray="3 4" opacity=".5"/>
+                </svg>
+                <i class="cm cm--tl"></i><i class="cm cm--tr"></i><i class="cm cm--bl"></i><i class="cm cm--br"></i>
+              </div>
+              <figcaption>Fig. 02 — Visuel illustratif</figcaption>
+            </figure>
+          </li>
+
+          <li class="rf__row" tabindex="0" style="--i:2">
+            <span class="rf__num">03</span>
+            <div class="rf__main">
+              <h3 class="rf__name">Nouvel Hôpital Ibn Sina</h3>
+              <p class="rf__role">Expérience projet du fondateur</p>
+            </div>
+            <figure class="rf__vis">
+              <div class="rf__frame">
+                <svg viewBox="0 0 300 200" aria-hidden="true" focusable="false">
+                  <path class="d" pathLength="1" d="M44 52H112V92H188V52H256V152H188V112H112V152H44Z"/>
+                  <path class="d" pathLength="1" d="M44 82H112M44 122H112M78 52V152M222 52V152M188 82H256M188 122H256M112 100H188"/>
+                  <path d="M78 34V52M150 34V92M222 34V52" stroke-dasharray="2 3" opacity=".6"/>
+                  <circle cx="78" cy="30" r="4"/><circle cx="150" cy="30" r="4"/><circle cx="222" cy="30" r="4"/>
+                  <path d="M20 172H280M20 166V178M280 166V178"/>
+                </svg>
+                <i class="cm cm--tl"></i><i class="cm cm--tr"></i><i class="cm cm--bl"></i><i class="cm cm--br"></i>
+              </div>
+              <figcaption>Fig. 03 — Visuel illustratif</figcaption>
+            </figure>
+          </li>
+
+          <li class="rf__row" tabindex="0" style="--i:3">
+            <span class="rf__num">04</span>
+            <div class="rf__main">
+              <h3 class="rf__name">MOL Project — UM6P</h3>
+              <p class="rf__role"><span class="rf__k">Rôle</span>Senior Survey Engineer</p>
+              <p class="rf__meta">Benguerir</p>
+            </div>
+            <figure class="rf__vis">
+              <div class="rf__frame">
+                <svg viewBox="0 0 300 200" aria-hidden="true" focusable="false">
+                  <path class="d" pathLength="1" d="M40 100C40 50 100 24 160 30C222 36 266 72 258 116C250 158 204 178 152 172C92 166 40 146 40 100Z"/>
+                  <path class="d" pathLength="1" d="M70 100C70 66 112 46 158 50C204 54 236 78 230 110C224 138 192 150 152 146C108 142 70 128 70 100Z"/>
+                  <path class="d" pathLength="1" d="M104 100C104 82 128 70 156 72C184 74 200 88 196 106C192 122 174 128 152 126C126 124 104 116 104 100Z"/>
+                  <path class="d" pathLength="1" d="M14 150C70 128 130 160 200 132S270 120 286 108"/>
+                  <rect x="128" y="88" width="26" height="16"/><rect x="160" y="92" width="18" height="14"/><rect x="132" y="110" width="20" height="10"/>
+                  <circle cx="70" cy="100" r="2.5"/><circle cx="230" cy="110" r="2.5"/><circle cx="158" cy="50" r="2.5"/>
+                </svg>
+                <i class="cm cm--tl"></i><i class="cm cm--tr"></i><i class="cm cm--bl"></i><i class="cm cm--br"></i>
+              </div>
+              <figcaption>Fig. 04 — Visuel illustratif</figcaption>
+            </figure>
+          </li>
+        </ol>
+
+        <p class="rf__note">Les projets cités relèvent de l’expérience professionnelle de Khalid AMEDIAZ, fondateur du cabinet.</p>
+      </div>
+    </section>
+
+    <!-- ============ 07 · BIM & DIGITAL ============ -->
+    <section class="section theme-dark bg-900" id="bim-digital" aria-labelledby="bim-title">
+      <div class="container grid">
+        <div class="rail"><div class="rail__inner"><span class="label">07 — BIM &amp; Digital</span></div></div>
+        <div class="body">
+          <h2 id="bim-title" data-reveal>Du nuage de points au modèle.</h2>
+          <p class="lead" data-reveal>Le relevé de terrain devient un plan, puis un modèle numérique partagé par tous les intervenants. Nous accompagnons cette chaîne de bout en bout&nbsp;: acquisition, modélisation, coordination BIM et exploitation SIG.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="stages">
+          <figure class="fig" data-reveal>
+            <svg viewBox="0 0 320 250" role="img" aria-label="Bâtiment représenté par un nuage de points" class="fig__svg fig__svg--cloud">
+              <g class="cloud">
+                <path d="M150 0 271.2 70V180L193.3 225 72.1 155V45Z"/>
+                <path d="M72.1 45 193.3 115 271.2 70M193.3 115V225"/>
+                <path d="M150 0V110M150 110 271.2 180M150 110 72.1 155" class="cloud--faint"/>
+              </g>
+              <g class="scatter">
+                <circle cx="30" cy="205" r="1.4"/><circle cx="52" cy="222" r="1.4"/><circle cx="96" cy="238" r="1.4"/><circle cx="134" cy="243" r="1.4"/>
+                <circle cx="228" cy="238" r="1.4"/><circle cx="262" cy="222" r="1.4"/><circle cx="296" cy="204" r="1.4"/><circle cx="300" cy="160" r="1.4"/>
+                <circle cx="46" cy="120" r="1.4"/><circle cx="24" cy="160" r="1.4"/><circle cx="292" cy="96" r="1.4"/><circle cx="118" cy="20" r="1.4"/>
+              </g>
+            </svg>
+            <figcaption><span class="label">01 — Relevé</span><p>Acquisition des données de terrain&nbsp;: la réalité mesurée.</p></figcaption>
+          </figure>
+
+          <figure class="fig" data-reveal style="--d:.1s">
+            <svg viewBox="0 0 320 250" role="img" aria-label="Bâtiment représenté en plan filaire" class="fig__svg fig__svg--plan">
+              <path d="M150 0 271.2 70V180L193.3 225 72.1 155V45Z"/>
+              <path d="M72.1 45 193.3 115 271.2 70M193.3 115V225"/>
+              <path d="M150 0V110M150 110 271.2 180M150 110 72.1 155" stroke-dasharray="3 4" class="plan--faint"/>
+              <path d="M72.1 163V175M72.1 169 193.3 239M193.3 233V245" class="plan--dim"/>
+              <text x="122" y="222" transform="rotate(30 122 222)">L</text>
+            </svg>
+            <figcaption><span class="label">02 — Plan</span><p>Plans et coupes exploitables, issus de mesures vérifiées.</p></figcaption>
+          </figure>
+
+          <figure class="fig" data-reveal style="--d:.2s">
+            <svg viewBox="0 0 320 250" role="img" aria-label="Modèle BIM structuré avec un conflit détecté" class="fig__svg fig__svg--model">
+              <path class="model-face" d="M72.1 45 150 0 271.2 70V180L193.3 225 72.1 155Z"/>
+              <path d="M150 0 271.2 70V180L193.3 225 72.1 155V45Z"/>
+              <path d="M72.1 45 193.3 115 271.2 70M193.3 115V225"/>
+              <path class="model--floor" d="M72.1 127.5 193.3 197.5M72.1 100 193.3 170M72.1 72.5 193.3 142.5M271.2 152.5 193.3 197.5M271.2 125 193.3 170M271.2 97.5 193.3 142.5"/>
+              <path class="model--floor" d="M112.5 178.3V68.3M152.9 201.7V91.7M232.3 202.5V92.5"/>
+              <path class="model--tag" d="M46 18 100 110M152.9 146.7V236"/>
+              <text x="2" y="12">IfcWall · LOD 300</text>
+              <text x="160" y="246">CONFLIT DÉTECTÉ</text>
+              <circle cx="100" cy="110" r="1.8" class="model--pt"/>
+              <circle cx="152.9" cy="146.7" r="4.5" class="model--clash"/>
+            </svg>
+            <figcaption><span class="label">03 — Modèle BIM</span><p>Un modèle structuré et coordonné, où les conflits sont détectés avant le chantier.</p></figcaption>
+          </figure>
+        </div>
+
+        <div class="bim-foot" data-reveal>
+          <ul class="tags">
+            <li>Modélisation BIM</li><li>Coordination</li><li>BIM management</li><li>SIG &amp; analyse spatiale</li><li>Management de projets</li>
+          </ul>
+          <div class="bim-foot__stat">
+            <p class="big"><span data-count="500">500</span><span class="big__suf">h+</span></p>
+            <p class="label">de formation BIM entre 2021 et 2025</p>
+            <p><a class="link" href="bim-digital.html">Explorer BIM &amp; Digital <span aria-hidden="true">→</span></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 08 · FONDATEUR ============ -->
+    <section class="section" id="fondateur" aria-labelledby="fondateur-title">
+      <div class="container grid">
+        <div class="rail"><div class="rail__inner"><span class="label">08 — Le fondateur</span></div></div>
+        <div class="body founder">
+          <div class="founder__text" data-reveal>
+            <h2 id="fondateur-title">Khalid AMEDIAZ</h2>
+            <p class="lead">Ingénieur géomètre topographe et BIM manager, inscrit au Tableau de l’Ordre National des Ingénieurs Géomètres Topographes (ONIGT) depuis 2019.</p>
+            <p>En neuf ans, il est intervenu sur des ouvrages majeurs du Royaume et a réalisé plus de 100 expertises immobilières. Il a suivi plus de 500 heures de formation BIM entre 2021 et 2025, pour unir la rigueur du géomètre et la culture numérique du BIM manager.</p>
+          </div>
+          <aside class="cartouche" data-reveal style="--d:.1s" aria-label="Fiche du fondateur">
+            <div class="cartouche__head label"><span>Fiche</span><span>Fondateur</span></div>
+            <dl class="spec">
+              <div><dt>Nom</dt><dd>Khalid AMEDIAZ</dd></div>
+              <div><dt>Titre</dt><dd>Ingénieur Géomètre Topographe</dd></div>
+              <div><dt>Fonction</dt><dd>BIM Manager · Fondateur</dd></div>
+              <div><dt>Ordre</dt><dd>ONIGT · Tableau depuis 2019</dd></div>
+              <div><dt>Expérience</dt><dd>9 ans</dd></div>
+              <div><dt>Formation BIM</dt><dd>500 h+ · 2021–2025</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 09 · CONTACT ============ -->
+    <section class="section theme-dark bg-800 cta" id="contact" aria-labelledby="contact-title" data-io>
+      <svg class="cta__contours" viewBox="0 0 1600 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"
+           data-contours data-seed="41" data-cx="1250" data-cy="560" data-r0="30" data-r1="700" data-levels="12" data-major="4" data-sx="1.3" data-sy="0.85"></svg>
+      <svg class="cta__mark" viewBox="0 0 120 120" aria-hidden="true"><use href="#ag-mark"/></svg>
+
+      <div class="container grid">
+        <div class="rail"><div class="rail__inner"><span class="label">09 — Contact</span></div></div>
+        <div class="body">
+          <h2 id="contact-title" class="cta__title" data-reveal>Parlons de votre projet.</h2>
+          <p class="lead" data-reveal>Un terrain à évaluer, un levé à réaliser, un modèle à structurer&nbsp;? Décrivez-nous votre besoin, nous revenons vers vous rapidement.</p>
+
+          <div class="cta__actions" data-reveal>
+            <a class="btn btn--primary" href="contact.html">Présenter votre projet <span class="btn__arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn--outline" href="https://wa.me/212610936544" rel="noopener">WhatsApp <span class="btn__arrow" aria-hidden="true">→</span></a>
+          </div>
+
+          <dl class="channels" data-reveal>
+            <div class="channel"><dt class="label">Téléphone</dt><dd><a href="tel:+212610936544">+212&nbsp;6&nbsp;10&nbsp;93&nbsp;65&nbsp;44</a></dd></div>
+            <div class="channel"><dt class="label">E-mail</dt><dd><a href="mailto:kh.amediaz@gmail.com">kh.amediaz@gmail.com</a></dd></div>
+            <div class="channel"><dt class="label">Siège</dt><dd class="addr">Avenue Abdelkarim El Khatabi, Imm&nbsp;30, Appt&nbsp;4<br>Témara, Maroc</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2026 Khalid</p>
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer theme-dark bg-950">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <a class="brand" href="#top" aria-label="AMEDIAZ GROUP — Accueil">
+            <svg class="brand__mark" viewBox="0 0 120 120" aria-hidden="true"><use href="#ag-mark"/></svg>
+            <span class="brand__name">AMEDIAZ <span>GROUP</span></span>
+          </a>
+          <p class="site-footer__slogan">Demain se mesure aujourd’hui.</p>
+          <p class="label">Topographie · Foncier · BIM · Digital</p>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Navigation du pied de page">
+          <p class="label">Navigation</p>
+          <ul>
+            <li><a href="#expertises">Expertises</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#cycle">Cycle de vie</a></li>
+            <li><a href="#secteurs">Secteurs</a></li>
+            <li><a href="#references">Références</a></li>
+            <li><a href="#bim-digital">BIM &amp; Digital</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-footer__contact">
+          <p class="label">Contact</p>
+          <address>
+            Avenue Abdelkarim El Khatabi,<br>Imm&nbsp;30, Appt&nbsp;4<br>Témara, Maroc
+          </address>
+          <p><a href="tel:+212610936544">+212&nbsp;6&nbsp;10&nbsp;93&nbsp;65&nbsp;44</a></p>
+          <p><a href="mailto:kh.amediaz@gmail.com">kh.amediaz@gmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p class="label">AMEDIAZ GROUP SARL AU · ICE&nbsp;004025283000039</p>
+        <p class="label">Ingénieur Géomètre Topographe · ONIGT</p>
+        <ul class="site-footer__legal">
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
+          <li>© 2026 AMEDIAZ GROUP</li>
+        </ul>
+      </div>
+
+      <div class="site-footer__geo">
+        <svg class="scalebar" viewBox="0 0 220 28" aria-hidden="true">
+          <path d="M1 8H219M1 2V14M110 2V14M219 2V14" fill="none" stroke="currentColor"/>
+          <rect x="1" y="6" width="109" height="4" fill="currentColor"/>
+          <text x="0" y="26">0</text><text x="110" y="26" text-anchor="middle">50</text><text x="219" y="26" text-anchor="end">100 m</text>
+        </svg>
+        <p class="label">Témara · 33.9287° N — 6.9062° O</p>
+        <a class="link label" href="#top">Haut de page <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
